@@ -16,9 +16,11 @@ namespace PrimeNumbers.Views
             while (keepGoing)
             {
                 Console.Clear();
-                Console.WriteLine("Welcome");
+                Console.WriteLine("\t***********");
+                Console.WriteLine("\t* Welcome *");
+                Console.WriteLine("\t***********");
                 Console.WriteLine("What would you like to do?");
-                Console.WriteLine("1. Test a number\n " +
+                Console.WriteLine("1. Test a number\n" +
                     "2. Show added numbers\n" +
                     "3. Add next prime number to the list\n" +
                     "4. Exit");

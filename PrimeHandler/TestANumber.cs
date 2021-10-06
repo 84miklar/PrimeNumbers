@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrimeNumbers.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,27 +16,28 @@ namespace PrimeNumbers.PrimeHandler
         /// <returns>true if number is prime, false if not</returns>
         public bool PrimeCalculator(int numberToTest)
         {
-            var listOfNumbers = new List<int>();
-            var prime = new PrimeNumber();
             if (numberToTest > 0)
             {
                 for (int i = 2; i < numberToTest; i++)
                 {
-                    listOfNumbers.Add(i);
-                }
-                listOfNumbers.Remove(numberToTest);
-
-                foreach (var num in listOfNumbers)
-                {
-                    if (numberToTest % num == 0)
+                    if (i != numberToTest && numberToTest % i == 0)
                     {
+
                         return false;
                     }
+
                 }
-                PrimeNumber.primeNumbers.Add(numberToTest);
-                Console.WriteLine("\n------Your number was added to the list of prime numbers------\n");
+                if(!PrimeNumber.primeNumbers.Contains(numberToTest))
+                {
+                    PrimeNumber.primeNumbers.Add(numberToTest);
+                    Console.WriteLine($"\n------{numberToTest} was added to the list of prime numbers------");
+                }
+                else Console.WriteLine($"\n{numberToTest} was already in the list of prime numbers");
+                ControlHelper.PressEnter();
                 return true;
+           
             }
+            
             return false;
         }
     }

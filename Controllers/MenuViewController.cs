@@ -12,6 +12,7 @@ namespace PrimeNumbers.Controllers
     {
         public static void MenuController(int choice)
         {
+            var next = new AddNextPrime();
             switch (choice)
             {
                 case 1:
@@ -21,7 +22,7 @@ namespace PrimeNumbers.Controllers
                     ShowAddedNumbersView.ShowAddedNumbers();
                     break;
                 case 3:
-                    AddNextPrime();
+                    AddNextPrime.AddPrime();
                     break;
                 case 4:
                     MenuView.keepGoing = false;
@@ -33,18 +34,5 @@ namespace PrimeNumbers.Controllers
             }
 
         }
-
-        private static void AddNextPrime()
-        {
-            Console.WriteLine("Add next prime");
-        }
-
-        private static void ShowAddedNumbers()
-        {
-            Console.WriteLine("Show added");
-        }
-
-       
-    
-}
+     }
 }
