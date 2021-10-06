@@ -10,7 +10,7 @@ namespace PrimeNumbers.PrimeHandler
     public class TestANumber
     {
         /// <summary>
-        /// Checks if input is a prime number.
+        /// Checks if input is a prime number. Number must be more than 0.
         /// </summary>
         /// <param name="numberToTest"></param>
         /// <returns>true if number is prime, false if not</returns>

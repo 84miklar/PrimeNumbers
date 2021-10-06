@@ -8,19 +8,28 @@ namespace PrimeNumbers.Controllers
     {
         internal static void AddPrime()
         {
+            
             var test = new TestANumber();
-            PrimeNumber.primeNumbers.Sort();
-            var lastNum = PrimeNumber.primeNumbers.Last();
-            var listLenght = PrimeNumber.primeNumbers.Count();
-            for (int i = lastNum+1; i < int.MaxValue; i++)
+            if (PrimeNumber.primeNumbers.Count > 0)
             {
-                test.PrimeCalculator(i);
-               if(PrimeNumber.primeNumbers.Count() == listLenght + 1)
+                PrimeNumber.primeNumbers.Sort();
+                var lastNum = PrimeNumber.primeNumbers.Last();
+                var listLenght = PrimeNumber.primeNumbers.Count();
+                for (int i = lastNum + 1; i < int.MaxValue; i++)
                 {
-                    break;
+                    test.PrimeCalculator(i);
+                    if (PrimeNumber.primeNumbers.Count() == listLenght + 1)
+                    {
+                        break;
+                    }
                 }
             }
-
+            else
+            {
+            Console.Clear();
+            Console.WriteLine("No numbers in list...");
+            ControlHelper.PressEnter();
+            }
         }
     }
 }
