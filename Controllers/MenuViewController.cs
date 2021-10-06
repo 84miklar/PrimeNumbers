@@ -1,4 +1,5 @@
-﻿using PrimeNumbers.Views;
+﻿using PrimeNumbers.PrimeHandler;
+using PrimeNumbers.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace PrimeNumbers.Controllers
                     TestANumberView.PrimeView();
                     break;
                 case 2:
-                    ShowAddedNumbers();
+                    ShowAddedNumbersView.ShowAddedNumbers();
                     break;
                 case 3:
                     AddNextPrime();

@@ -13,9 +13,10 @@ namespace PrimeNumbers.PrimeHandler
         /// </summary>
         /// <param name="numberToTest"></param>
         /// <returns>true if number is prime, false if not</returns>
-        public bool PrimeTester(int numberToTest)
+        public bool PrimeCalculator(int numberToTest)
         {
             var listOfNumbers = new List<int>();
+            var prime = new PrimeNumber();
             if (numberToTest > 0)
             {
                 for (int i = 2; i < numberToTest; i++)
@@ -31,7 +32,8 @@ namespace PrimeNumbers.PrimeHandler
                         return false;
                     }
                 }
-
+                PrimeNumber.primeNumbers.Add(numberToTest);
+                Console.WriteLine("\n------Your number was added to the list of prime numbers------\n");
                 return true;
             }
             return false;

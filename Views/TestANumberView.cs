@@ -11,7 +11,7 @@ namespace PrimeNumbers.Views
             var tester = new TestANumber();
             Console.Write("Please enter number: ");
             var number = ControlHelper.TryParse();
-            tester.PrimeTester(number);
+            tester.PrimeCalculator(number);
         }
     }
 }
