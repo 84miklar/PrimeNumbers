@@ -1,5 +1,6 @@
 ﻿using PrimeNumbers.Views;
 using System;
+using System.Collections.Generic;
 
 namespace PrimeNumbers
 {

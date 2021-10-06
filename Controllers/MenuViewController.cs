@@ -14,7 +14,7 @@ namespace PrimeNumbers.Controllers
             switch (choice)
             {
                 case 1:
-                    TestANumber();
+                    TestANumberView.PrimeView();
                     break;
                 case 2:
                     ShowAddedNumbers();
@@ -43,10 +43,7 @@ namespace PrimeNumbers.Controllers
             Console.WriteLine("Show added");
         }
 
-        private static void TestANumber()
-        {
-            Console.WriteLine("Test a number");
-        }
+       
     
 }
 }
