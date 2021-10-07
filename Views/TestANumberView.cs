@@ -4,9 +4,16 @@ using System;
 
 namespace PrimeNumbers.Views
 {
+    /// <summary>
+    /// Handles the UI for TestANumber class.
+    /// </summary>
     internal class TestANumberView
     {
-        public static void PrimeView()
+        /// <summary>
+        /// Handles the UI for PrimeCalculator method.
+        /// Checks if input is a correct number.
+        /// </summary>
+        public static void PrimeCalculatorView()
         {
             var tester = new TestANumber();
             Console.Clear();
@@ -18,5 +25,26 @@ namespace PrimeNumbers.Views
                 ControlHelper.PressEnter();
             }
         }
+
+        /// <summary>
+        /// Adds a prime number to the list of prime numbers.
+        /// Presents a positive result of the tested number.
+        /// </summary>
+        /// <param name="numberToTest"></param>
+        public static void AddPrimeToList(int numberToTest)
+        {
+            PrimeNumber.primeNumbers.Add(numberToTest);
+            Console.WriteLine($"\n------{numberToTest} was added to the list of prime numbers------");
+        }
+
+        /// <summary>
+        /// Presents a negative result of the tested number.
+        /// </summary>
+        /// <param name="numberToTest"></param>
+        public static void DoNotAddPrimeToList(int numberToTest)
+        {
+            Console.WriteLine($"\n{numberToTest} was already in the list of prime numbers");
+        }
+
     }
 }

@@ -4,20 +4,27 @@ using System.Linq;
 
 namespace PrimeNumbers.Controllers
 {
+    /// <summary>
+    /// Class that finds the next prime number.
+    /// </summary>
     internal class AddNextPrime
     {
+        /// <summary>
+        /// Add the next prime number to the list. List of prime numbers can not be empty or null.
+        /// Sorts list and sends next number to prime calculator.
+        /// If a prime is added to list, the loop breaks.
+        /// </summary>
         internal static void AddPrime()
         {
-            
-            var test = new TestANumber();
-            if (PrimeNumber.primeNumbers.Count > 0)
+            var testNumber = new TestANumber();
+            if (PrimeNumber.primeNumbers.Count > 0 || PrimeNumber.primeNumbers == null)
             {
                 PrimeNumber.primeNumbers.Sort();
-                var lastNum = PrimeNumber.primeNumbers.Last();
+                var lastNumber = PrimeNumber.primeNumbers.Last();
                 var listLenght = PrimeNumber.primeNumbers.Count();
-                for (int i = lastNum + 1; i < int.MaxValue; i++)
+                for (int i = lastNumber + 1; i < int.MaxValue; i++)
                 {
-                    test.PrimeCalculator(i);
+                    testNumber.PrimeCalculator(i);
                     if (PrimeNumber.primeNumbers.Count() == listLenght + 1)
                     {
                         break;

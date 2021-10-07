@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrimeNumbers.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,16 +7,20 @@ using System.Threading.Tasks;
 
 namespace PrimeNumbers.PrimeHandler
 {
-    public class ShowAddedNumbersView
+    /// <summary>
+    /// Handles the presentation of the list of prime numbers.
+    /// </summary>
+    public static class ShowAddedNumbersView
     {
+        /// <summary>
+        /// Presents all the numbers in the list of prime numbers.
+        /// List must contain more than 0 or not be null.
+        /// </summary>
         internal static void ShowAddedNumbers()
         {
             Console.Clear();
             Console.WriteLine("All prime numbers in list:\n");
-            if (PrimeNumber.primeNumbers.Count == 0)
-            {
-                Console.WriteLine("No numbers added...");
-            }
+            if (PrimeNumber.primeNumbers?.Count == 0) Console.WriteLine("No numbers added...");
             else
             {
                 PrimeNumber.primeNumbers.Sort();
@@ -24,8 +29,7 @@ namespace PrimeNumbers.PrimeHandler
                     Console.WriteLine(number);
                 }
             }
-            Console.WriteLine("\nPlease press enter to continue.");
-            Console.ReadKey();
+            ControlHelper.PressEnter();
         }
     }
 }

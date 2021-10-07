@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PrimeNumbers
 {
+    /// <summary>
+    /// Class that holds the public static list of prime numbers.
+    /// </summary>
     public class PrimeNumber
     {
        public static List<int> primeNumbers = new List<int>();

@@ -16,7 +16,7 @@ namespace PrimeNumbers.Controllers
             switch (choice)
             {
                 case 1:
-                    TestANumberView.PrimeView();
+                    TestANumberView.PrimeCalculatorView();
                     break;
                 case 2:
                     ShowAddedNumbersView.ShowAddedNumbers();

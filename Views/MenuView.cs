@@ -7,10 +7,16 @@ using System.Threading.Tasks;
 
 namespace PrimeNumbers.Views
 {
-    internal class MenuView
+    /// <summary>
+    /// Handles the main menu.
+    /// </summary>
+    internal static class MenuView
     {
         public static bool keepGoing = true;
 
+        /// <summary>
+        /// Shows the main menu to user. Sends input choice to menu controller.
+        /// </summary>
         public static void OpenMenu()
         {
             while (keepGoing)
