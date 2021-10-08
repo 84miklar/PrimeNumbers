@@ -32,6 +32,7 @@ namespace PrimeNumbers.Views
                     "4. Exit");
                 var choice = ControlHelper.TryParse();
                 MenuViewController.MenuController(choice);
+                if(choice != 4) ControlHelper.PressEnter();
             }
         }
     }

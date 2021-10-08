@@ -29,7 +29,7 @@ namespace PrimeNumbers.PrimeHandler
                     Console.WriteLine(number);
                 }
             }
-            ControlHelper.PressEnter();
+           
         }
     }
 }

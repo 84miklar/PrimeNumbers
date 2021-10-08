@@ -35,8 +35,8 @@ namespace PrimeNumbers.Controllers
             {
             Console.Clear();
             Console.WriteLine("No numbers in list...");
-            ControlHelper.PressEnter();
             }
+           
         }
     }
 }

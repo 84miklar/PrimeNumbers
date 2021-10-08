@@ -29,7 +29,7 @@ namespace PrimeNumbers.PrimeHandler
                 if (!PrimeNumber.primeNumbers.Contains(numberToTest))
                   TestANumberView.AddPrimeToList(numberToTest);
                 else TestANumberView.DoNotAddPrimeToList(numberToTest);
-                ControlHelper.PressEnter();
+              
                 return true;
             }
             return false;

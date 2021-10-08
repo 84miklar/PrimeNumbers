@@ -22,8 +22,8 @@ namespace PrimeNumbers.Views
             if (!tester.PrimeCalculator(number) && number != 0)
             {
                 Console.WriteLine("\nThis was not a prime number");
-                ControlHelper.PressEnter();
             }
+               
         }
 
         /// <summary>
@@ -35,6 +35,7 @@ namespace PrimeNumbers.Views
         {
             PrimeNumber.primeNumbers.Add(numberToTest);
             Console.WriteLine($"\n------{numberToTest} was added to the list of prime numbers------");
+           
         }
 
         /// <summary>
