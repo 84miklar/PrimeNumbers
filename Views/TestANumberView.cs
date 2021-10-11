@@ -32,7 +32,6 @@ namespace PrimeNumbers.Views
         /// <param name="numberToTest"></param>
         public static void AddPrimeToList(int numberToTest)
         {
-            PrimeNumber.PrimeNumbers.Add(numberToTest);
             Console.WriteLine($"\n------{numberToTest} was added to the list of prime numbers------");
         }
 

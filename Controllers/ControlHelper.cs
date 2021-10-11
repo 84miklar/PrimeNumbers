@@ -25,7 +25,7 @@ namespace PrimeNumbers.Controllers
         /// </summary>
         public static void PressEnter()
         {
-            Console.WriteLine("Please press enter to continue.");
+            Console.WriteLine("\nPlease press enter to continue.");
             Console.ReadKey();
         }
     }

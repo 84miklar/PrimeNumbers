@@ -11,6 +11,6 @@ namespace PrimeNumbers
     /// </summary>
     public class PrimeNumber
     {
-     public static List<int> PrimeNumbers { get; set; } = new List<int>();
+        public static SortedList<int, int> SortList { get; set; } = new();
     }
 }

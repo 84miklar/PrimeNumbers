@@ -17,18 +17,14 @@ namespace PrimeNumbers.Controllers
         internal static void AddPrime()
         {
             var testNumber = new TestANumber();
-            if (PrimeNumber.PrimeNumbers.Count > 0 || PrimeNumber.PrimeNumbers == null)
+            if (PrimeNumber.SortList.Count > 0 || PrimeNumber.SortList == null)
             {
-                PrimeNumber.PrimeNumbers.Sort();
-                var lastNumber = PrimeNumber.PrimeNumbers.Last();
-                var listLenght = PrimeNumber.PrimeNumbers.Count();
+                var lastNumber = PrimeNumber.SortList.Last().Value;
+                var listLenght = PrimeNumber.SortList.Count;
                 for (int i = lastNumber + 1; i < int.MaxValue; i++)
                 {
                     testNumber.PrimeCalculator(i);
-                    if (PrimeNumber.PrimeNumbers.Count() == listLenght + 1)
-                    {
-                        break;
-                    }
+                    if (PrimeNumber.SortList.Count == listLenght + 1) break;
                 }
             }
             else
