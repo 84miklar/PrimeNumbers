@@ -27,6 +27,8 @@ namespace PrimeNumbers.Controllers
                     MenuView.keepGoing = false;
                     break;
                 default:
+                    if (choice > 4)
+                        MenuView.DefaultView();
                     break;
             }
         }

@@ -35,5 +35,12 @@ namespace PrimeNumbers.Views
                 if(choice != 4) ControlHelper.PressEnter();
             }
         }
+        /// <summary>
+        /// Output if menu choice is >4.
+        /// </summary>
+        public static void DefaultView()
+        {
+            Console.WriteLine("Invalid choice. Input must be 1-4.");
+        }
     }
 }
