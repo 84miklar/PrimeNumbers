@@ -12,7 +12,6 @@ namespace PrimeNumbers.Controllers
     {
         public static void MenuController(int choice)
         {
-            var next = new AddNextPrime();
             switch (choice)
             {
                 case 1:
@@ -28,11 +27,8 @@ namespace PrimeNumbers.Controllers
                     MenuView.keepGoing = false;
                     break;
                 default:
-
                     break;
-
             }
-
         }
      }
 }

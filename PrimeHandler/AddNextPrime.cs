@@ -17,15 +17,15 @@ namespace PrimeNumbers.Controllers
         internal static void AddPrime()
         {
             var testNumber = new TestANumber();
-            if (PrimeNumber.primeNumbers.Count > 0 || PrimeNumber.primeNumbers == null)
+            if (PrimeNumber.PrimeNumbers.Count > 0 || PrimeNumber.PrimeNumbers == null)
             {
-                PrimeNumber.primeNumbers.Sort();
-                var lastNumber = PrimeNumber.primeNumbers.Last();
-                var listLenght = PrimeNumber.primeNumbers.Count();
+                PrimeNumber.PrimeNumbers.Sort();
+                var lastNumber = PrimeNumber.PrimeNumbers.Last();
+                var listLenght = PrimeNumber.PrimeNumbers.Count();
                 for (int i = lastNumber + 1; i < int.MaxValue; i++)
                 {
                     testNumber.PrimeCalculator(i);
-                    if (PrimeNumber.primeNumbers.Count() == listLenght + 1)
+                    if (PrimeNumber.PrimeNumbers.Count() == listLenght + 1)
                     {
                         break;
                     }
@@ -36,7 +36,6 @@ namespace PrimeNumbers.Controllers
             Console.Clear();
             Console.WriteLine("No numbers in list...");
             }
-           
         }
     }
 }

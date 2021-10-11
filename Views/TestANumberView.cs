@@ -23,7 +23,6 @@ namespace PrimeNumbers.Views
             {
                 Console.WriteLine("\nThis was not a prime number");
             }
-               
         }
 
         /// <summary>
@@ -33,9 +32,8 @@ namespace PrimeNumbers.Views
         /// <param name="numberToTest"></param>
         public static void AddPrimeToList(int numberToTest)
         {
-            PrimeNumber.primeNumbers.Add(numberToTest);
+            PrimeNumber.PrimeNumbers.Add(numberToTest);
             Console.WriteLine($"\n------{numberToTest} was added to the list of prime numbers------");
-           
         }
 
         /// <summary>
@@ -46,6 +44,5 @@ namespace PrimeNumbers.Views
         {
             Console.WriteLine($"\n{numberToTest} was already in the list of prime numbers");
         }
-
     }
 }

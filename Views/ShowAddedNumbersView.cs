@@ -20,16 +20,15 @@ namespace PrimeNumbers.PrimeHandler
         {
             Console.Clear();
             Console.WriteLine("All prime numbers in list:\n");
-            if (PrimeNumber.primeNumbers?.Count == 0) Console.WriteLine("No numbers added...");
+            if (PrimeNumber.PrimeNumbers?.Count == 0) { Console.WriteLine("No numbers added..."); }
             else
             {
-                PrimeNumber.primeNumbers.Sort();
-                foreach (var number in PrimeNumber.primeNumbers)
+                PrimeNumber.PrimeNumbers.Sort();
+                foreach (var number in PrimeNumber.PrimeNumbers)
                 {
                     Console.WriteLine(number);
                 }
             }
-           
         }
     }
 }

@@ -26,10 +26,9 @@ namespace PrimeNumbers.PrimeHandler
                 {
                     if (i != numberToTest && numberToTest % i == 0) return false;
                 }
-                if (!PrimeNumber.primeNumbers.Contains(numberToTest))
+                if (!PrimeNumber.PrimeNumbers.Contains(numberToTest))
                   TestANumberView.AddPrimeToList(numberToTest);
                 else TestANumberView.DoNotAddPrimeToList(numberToTest);
-              
                 return true;
             }
             return false;
