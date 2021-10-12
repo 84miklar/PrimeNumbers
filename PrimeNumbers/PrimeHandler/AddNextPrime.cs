@@ -17,7 +17,7 @@ namespace PrimeNumbers.Controllers
         internal static void AddPrime()
         {
             var testNumber = new TestANumber();
-            if (PrimeNumber.SortList.Count > 0 || PrimeNumber.SortList == null)
+            if (PrimeNumber.SortList.Count > 0 && PrimeNumber.SortList != null)
             {
                 var lastNumber = PrimeNumber.SortList.Last().Value;
                 var listLenght = PrimeNumber.SortList.Count;
